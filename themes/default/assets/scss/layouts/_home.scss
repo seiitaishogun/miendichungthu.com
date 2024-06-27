@@ -1,0 +1,138 @@
+.cnv-slider{
+	.slick-list{
+		margin: 0;
+		.slick-slide{
+			margin: 0;
+		}
+	}
+	.item{
+		position: relative;
+		vertical-align: middle;
+	}
+	.img img{
+		display: block;
+		width: 100%;
+	}
+	.slick-arrow{
+		position: absolute;
+		text-align: center;
+		width: 60px;
+		height: 60px;
+		font-size: 42px;
+		line-height: 58px;
+		color: #fff;
+		background: rgba(#000, 0.5);
+		top: 50%;
+		margin-top: -30px;
+		border-radius: 50%;
+		&:hover{
+			background: $c1;
+		}
+		&.prev{
+			left: 60px;
+		}
+		&.next{
+			right: 60px;
+		}
+		@media all and (max-width: 991px){
+			width: 40px;
+			height: 40px;
+			font-size: 24px;
+			line-height: 40px;
+			margin-top: -20px;
+			&.prev{
+				left: 15px;
+			}
+			&.next{
+				right: 15px;
+			}
+		}
+	}
+	.slick-dots{
+		position: absolute;
+		left: 10px;
+		right: 10px;
+		bottom: 20px;
+		li{
+			border-color: $c1;
+			&.slick-active{
+				background: $c1;
+			}
+		}
+	}
+}
+
+
+.fix-right{
+	position: fixed;
+	top: 34%;
+	right: 0;
+	border-radius: 10px 0 0 10px;
+	overflow: hidden;
+	box-shadow: 0px 1px 6px 0 rgba(#000,0.2);
+	background: #fff;
+	width: 220px;
+	a{
+		display: flex;
+		min-height: 69px;
+		align-items: center;
+		padding: 5px 10px 5px 13px;
+		text-transform: uppercase;
+		color: #0a243d;
+		font-size: 12px;
+		line-height: 18px;
+		big{
+			font-size: 14px;
+		}
+		span{
+			width: 40px;
+			text-align: center;
+			display: block;
+			flex: 0 0 40px;
+			margin-right: 8px;
+		}
+		&:hover{
+			background: #54a048;
+			color: #fff;
+			span img{
+				filter: brightness(0) invert(1);
+			}
+		}
+	}
+	.m-open{
+		display: none;
+	}
+	@media all and (max-width: 767px){
+		border-radius: 0 0 0 10px;
+		overflow: visible;
+		right: -220px;
+		transition: all .2s ease-in-out;
+		a:last-child{
+			border-radius: 0 0 0 10px;
+		}
+		.m-open{
+			display: block;
+			position: absolute;
+			right: 100%;
+			width: 30px;
+			height: 40px;
+			border-radius: 10px 0 0 10px;
+			text-align: center;
+			font-size: 24px;
+			background: #fff;
+			top: 0;
+			color: #54a048;
+			line-height: 40px;
+			box-shadow: 0px 1px 6px 0 rgba(#000,0.2);
+			&:after{
+				@include font("\f0d9");
+			}
+		}
+		&.active{
+			right: 0;
+			.m-open:after{
+				content: "\f0da";
+			}
+		}
+	}
+}

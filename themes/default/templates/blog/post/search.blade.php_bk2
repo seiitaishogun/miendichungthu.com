@@ -1,0 +1,75 @@
+@extends('theme::layout')
+
+@section('content')
+    @include('theme::partial.heading', ['title' => trans('blog::language.search_result'), 'url' => 'javascript:void(0);'])
+
+<div id="search_wrap" class="container" style="margin-top: 30px">
+    <div class="row">
+        @include('theme::partial.sidebar')
+        <div class="col-md-8">
+            <div class="single">
+                <h2 class="s-title"> Tìm kiếm Trang:  </h2>
+            </div>
+            @forelse($pages as $post)
+            <div class="post2 clearfix col-sm-12">
+                <div class="ct1">
+                    <h2 class="title"><a class="smooth" href="pages/{{ $post->slug }}" title="">{{ $post->name }}</a></h2>
+                    @php session()->get('lang') == 'vi' ? setlocale(LC_TIME, 'vi_VN') : setlocale(LC_TIME, ''); @endphp
+                    <div class="des2">
+                        {{ $post->description }}
+                    </div>
+                    <a class="more" href="pages/{{ $post->slug }}" title="">@if(session('lang') == 'vi') Xem chi tiết @else See more @endif</a>
+                </div>
+            </div>
+            @empty
+                <div class="post2 clearfix">
+                    Không tìm thấy kết quả!
+                </div>
+            @endforelse
+            <div class="single"></div>
+                <h2 class="s-title"> Tìm kiếm Bài Viết: </h2>
+            </div>
+            @if($posts->isNotEmpty())
+                {!! $posts->appends(request(['q']))->links() !!}
+            @endif
+            @forelse($posts as $post)
+            <div class="post2 clearfix">
+                <a class="img hv-scale hv-over cnv-img-new" href="{{ $post->link }}" title="">
+                    <img src="{{ $post->post->thumbnail }}" alt="" title="" />
+                </a>
+                <div class="ct">
+                    <h2 class="title"><a class="smooth" href="{{ $post->link }}" title="">{{ $post->name }}</a></h2>
+                    @php session()->get('lang') == 'vi' ? setlocale(LC_TIME, 'vi_VN') : setlocale(LC_TIME, ''); @endphp
+                    <time>{{ $post->post->published_at->formatLocalized('%A') }}, {{ Carbon\Carbon::parse($post->post->published_at)->format('d/m/Y') }}</time>
+                    <div class="des2">
+                        {{ $post->description }}
+                    </div>
+                    <a class="more" href="{{ $post->link }}" title="">@if(session('lang') == 'vi') Xem chi tiết @else See more @endif</a>
+                </div>
+            </div>
+            @empty
+                <div class="post2 clearfix">
+                    Không tìm thấy bài viết
+                </div>
+            @endforelse
+
+            @if($posts->isNotEmpty())
+                {!! $posts->appends(request(['q']))->links() !!}
+            @endif
+        </div>
+    </div>
+</div>
+@endsection
+@push('footer')
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $(window).load(function(){
+        setTimeout(function() {
+            $('body, html').animate({
+                scrollTop: $('#search_wrap').offset().top - 60
+            }, 700);
+        }, 1000);
+        });
+    });
+    </script>
+@endpush

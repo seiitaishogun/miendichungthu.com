@@ -1,0 +1,32 @@
+<?php
+
+return [
+    'manager_category' => 'Quản lý danh mục bài viết',
+    'category_list' => 'Danh sách danh mục',
+    'category_create' => 'Tạo danh mục mới',
+    'category_edit'=> 'Sửa danh mục',
+    'parent_category' => 'Danh mục cha',
+    'manager_post' => 'Quản lý bài viết',
+    'post_list' => 'Danh sách bài viết',
+    'post_create' => 'Tạo bài viết mới',
+    'post_edit' => 'Sửa bài viết',
+    'choose_category' => 'Danh mục bài viết',
+    'publish' => 'Hiển thị',
+    'published_date' => 'Ngày đăng',
+    'featured' => 'Gim bài này',
+    'feature' => 'Nổi bật',
+    'was_featured' => 'Nổi bật',
+    'root_category' => 'Danh mục gốc',
+    'required_categories' => 'Bài viết này chưa có danh mục',
+    'what_are_you_wanna' => 'Bạn muốn tìm gì ?',
+    'search' => 'Tìm kiếm',
+    'search_result' => 'Kết quả tìm kiếm',
+    'author' => 'Tác giả',
+    'normal' => 'Bình thường',
+    'tags' => 'Thẻ',
+    'address' => 'Địa chỉ',
+    'province' => 'Tỉnh thành',
+    'district' => 'Quận huyện',
+    'others' => 'Thông tin khác',
+    'include_categories' => 'Tất cả danh mục'
+];

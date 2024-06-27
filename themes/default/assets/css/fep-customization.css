@@ -1,0 +1,71 @@
+#DigitalIdentityHubHost {
+    width: 100%;
+}
+#DigitalIdentityHubHost, #ConsentHubHost, .janrain-capture-ui, .janrain-provider-text-color-facebook {
+    font-family: 'HelveticaNeue' !important;
+}
+
+#signIn {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.social-login-button ul {
+    display: inline-block;
+}
+
+#signIn #janrain-facebook {
+    width: 200px;
+}
+
+.janrain-capture-ui .capture_form_item {
+    padding-left: 0;
+}
+
+.signBottomInfo {
+    padding-top: 12px;
+}
+
+#DigitalIdentityHubHost .janrain-capture-ui .capture_form_item > label {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.janrain-capture-ui .capture_backgroundColor .capture_text_input, .janrain-capture-ui .capture_backgroundColor .capture_checkbox,.janrain-capture-ui .capture_backgroundColor .capture_radio, .janrain-capture-ui .capture_backgroundColor .capture_inputPlaceholder, .janrain-capture-ui .capture_backgroundColor .capture_select, .janrain-capture-ui .capture_backgroundColor .capture_textarea, .janrain-capture-ui .capture_backgroundColor .capture_checkbox, .janrain-capture-ui .capture_backgroundColor .capture_radio,
+.janrain-capture-ui .capture_text_input, .janrain-capture-ui .capture_checkbox, .janrain-capture-ui .capture_radio, .janrain-capture-ui .capture_inputPlaceholder, .janrain-capture-ui .capture_textarea, .janrain-capture-ui .capture_inputPlaceholder {
+    /* background-color: #e5ece8; */
+    color: #999;
+    padding: .375rem .75rem;
+    border-radius: 0;
+}
+
+.janrain-capture-ui .capture_primary, .janrain-capture-ui a.capture_primary, .janrain-capture-ui button.capture_primary, .janrain-capture-ui input.capture_primary,
+.janrain-capture-ui .capture_secondary, .janrain-capture-ui a.capture_secondary, .janrain-capture-ui button.capture_secondary, .janrain-capture-ui input.capture_secondary{
+    background-color: #5ba24e !important;
+    background: #5ba24e;
+    color: #fff !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    min-height: 31px;
+}
+
+.janrain-capture-ui .capture_btn, .janrain-capture-ui a.capture_btn, .janrain-capture-ui button.capture_btn, .janrain-capture-ui input.capture_btn, .janrain-capture-ui .capture_backButton{
+    box-shadow: none;
+}
+
+.capture_createAccountButton::before{
+    color: #fff !important;
+}
+
+.rememberme_box input[type=checkbox]{
+    margin-top: -4px;
+    margin-right: 5px;
+}
+
+.janrain-capture-ui .capture_footer .capture_btn {
+    margin: 0;
+}
+
+.register_button, .signBottomInfo {
+    display: none;
+}
